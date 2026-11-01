@@ -1,0 +1,134 @@
+[
+  {
+    "block": 1,
+    "title": "Ambiente",
+    "status": "PASS"
+  },
+  {
+    "block": 2,
+    "title": "Configuração",
+    "status": "PASS"
+  },
+  {
+    "block": 3,
+    "title": "Fontes",
+    "status": "PASS"
+  },
+  {
+    "block": 4,
+    "title": "Importação",
+    "status": "PASS"
+  },
+  {
+    "block": 5,
+    "title": "Integridade",
+    "status": "PASS"
+  },
+  {
+    "block": 6,
+    "title": "Reimportação",
+    "status": "PASS"
+  },
+  {
+    "block": 7,
+    "title": "Busca",
+    "status": "PASS"
+  },
+  {
+    "block": 8,
+    "title": "Disponibilidade",
+    "status": "PASS"
+  },
+  {
+    "block": 9,
+    "title": "Promoções",
+    "status": "PASS"
+  },
+  {
+    "block": 10,
+    "title": "Dinheiro e limites",
+    "status": "PASS"
+  },
+  {
+    "block": 11,
+    "title": "Políticas",
+    "status": "PASS"
+  },
+  {
+    "block": 12,
+    "title": "Pedidos",
+    "status": "PASS"
+  },
+  {
+    "block": 13,
+    "title": "Autorização",
+    "status": "PASS"
+  },
+  {
+    "block": 14,
+    "title": "Sessões",
+    "status": "PASS"
+  },
+  {
+    "block": 15,
+    "title": "Handshake Meta",
+    "status": "PASS"
+  },
+  {
+    "block": 16,
+    "title": "Assinatura Meta",
+    "status": "PASS"
+  },
+  {
+    "block": 17,
+    "title": "Eventos Meta",
+    "status": "PASS"
+  },
+  {
+    "block": 18,
+    "title": "Fila persistente",
+    "status": "PASS"
+  },
+  {
+    "block": 19,
+    "title": "HTTP Meta simulado",
+    "status": "PASS"
+  },
+  {
+    "block": 20,
+    "title": "Janela e templates",
+    "status": "PASS"
+  },
+  {
+    "block": 21,
+    "title": "Fluxo integrado simulado",
+    "status": "PASS"
+  },
+  {
+    "block": 22,
+    "title": "Contexto do agente com modelo simulado",
+    "status": "PASS"
+  },
+  {
+    "block": 22,
+    "title": "LLM real",
+    "status": "SKIPPED",
+    "reason": "RUN_LIVE_LLM não habilitado; nenhuma chamada real foi feita."
+  },
+  {
+    "block": 23,
+    "title": "Falhas e limites",
+    "status": "PASS"
+  },
+  {
+    "block": 24,
+    "title": "Suíte completa",
+    "status": "PASS"
+  },
+  {
+    "block": 25,
+    "title": "Meta real",
+    "status": "SKIPPED",
+    "reason": "RUN_LIVE_META não habilitado; nenhum WhatsApp real foi enviado."
+  }
+]

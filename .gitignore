@@ -1,0 +1,11 @@
+.env
+.venv/
+__pycache__/
+.pytest_cache/
+.ipynb_checkpoints/
+data/processed/*
+!data/processed/.gitkeep
+*.sqlite-wal
+*.sqlite-shm
+notebooks/*executed.ipynb
+validation_report.json

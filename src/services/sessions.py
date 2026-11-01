@@ -15,6 +15,8 @@ class Sessions:
         self.ensure(session_id)
         with connect(self.path) as c:
             r=c.execute('SELECT customer_id FROM identity_bindings WHERE sender=?',(sender,)).fetchone()
+            old=c.execute('SELECT customer_id FROM sessions WHERE session_id=?',(session_id,)).fetchone()[0]
+            if old!=(r[0] if r else None):c.execute('DELETE FROM turns WHERE session_id=?',(session_id,))
             # Only operator-established verification is accepted, never phone-text matching.
             c.execute("UPDATE sessions SET customer_id=?,auth_source=? WHERE session_id=?",(r[0] if r else None,'verified_binding' if r else 'anonymous',session_id))
     def customer(self,session_id):

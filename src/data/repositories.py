@@ -22,7 +22,9 @@ class StoreRepository:
     def search(self,query='',category='',max_price_brl=None,available_only=True,limit=5):
         limit=max(1,min(int(limit),10)); sql='SELECT * FROM catalog WHERE 1=1';args=[]
         # Split terms instead of requiring an exact contiguous phrase.
+        aliases={'violao':'violoes','guitarra':'guitarras','baixo':'baixos','bateria':'baterias','teclado':'teclados','ukulele':'ukuleles'}
         for word in normalize(query).split():
+            word=aliases.get(word,word)
             word=word.replace('%','\\%').replace('_','\\_')
             sql+=" AND norm(name || ' ' || category_name) LIKE ? ESCAPE '\\'";args.append('%'+word+'%')
         if category:sql+=' AND norm(category_name)=?';args.append(normalize(category))

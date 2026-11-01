@@ -1,0 +1,235 @@
+Python: 3.12.14
+openai 3.42.1
+fastapi 0.162.0
+httpx 0.28.1
+streamlit 1.66.1
+openpyxl 3.1.5
+pypdf 6.10.0
+pytest 9.2.0
+.                                                                        [100%]
+1 passed, 42 deselected in 0.58s
+
+BLOCO 01 — PASS: Ambiente
+.                                                                        [100%]
+1 passed, 42 deselected in 0.67s
+
+BLOCO 02 — PASS: Configuração
+.                                                                        [100%]
+1 passed, 42 deselected in 0.68s
+
+BLOCO 03 — PASS: Fontes
+.                                                                        [100%]
+1 passed, 42 deselected in 0.90s
+
+BLOCO 04 — PASS: Importação
+.                                                                        [100%]
+1 passed, 42 deselected in 0.61s
+
+BLOCO 05 — PASS: Integridade
+.                                                                        [100%]
+1 passed, 42 deselected in 0.66s
+
+BLOCO 06 — PASS: Reimportação
+......                                                                   [100%]
+6 passed, 37 deselected in 0.98s
+
+BLOCO 07 — PASS: Busca
+.                                                                        [100%]
+1 passed, 42 deselected in 0.62s
+
+BLOCO 08 — PASS: Disponibilidade
+.                                                                        [100%]
+1 passed, 42 deselected in 0.73s
+
+BLOCO 09 — PASS: Promoções
+.....                                                                    [100%]
+5 passed, 38 deselected in 0.60s
+
+BLOCO 10 — PASS: Dinheiro e limites
+....                                                                     [100%]
+4 passed, 39 deselected in 1.16s
+
+BLOCO 11 — PASS: Políticas
+.                                                                        [100%]
+1 passed, 42 deselected in 0.63s
+
+BLOCO 12 — PASS: Pedidos
+.                                                                        [100%]
+1 passed, 42 deselected in 0.61s
+
+BLOCO 13 — PASS: Autorização
+.                                                                        [100%]
+1 passed, 42 deselected in 0.61s
+
+BLOCO 14 — PASS: Sessões
+.                                                                        [100%]
+1 passed, 42 deselected in 0.58s
+
+BLOCO 15 — PASS: Handshake Meta
+.                                                                        [100%]
+1 passed, 42 deselected in 0.59s
+
+BLOCO 16 — PASS: Assinatura Meta
+.                                                                        [100%]
+1 passed, 42 deselected in 0.61s
+
+BLOCO 17 — PASS: Eventos Meta
+..                                                                       [100%]
+2 passed, 41 deselected in 0.74s
+
+BLOCO 18 — PASS: Fila persistente
+....                                                                     [100%]
+4 passed, 39 deselected in 0.71s
+
+BLOCO 19 — PASS: HTTP Meta simulado
+.                                                                        [100%]
+1 passed, 42 deselected in 0.67s
+
+BLOCO 20 — PASS: Janela e templates
+.                                                                        [100%]
+1 passed, 42 deselected in 0.63s
+
+BLOCO 21 — PASS: Fluxo integrado simulado
+.                                                                        [100%]
+1 passed, 42 deselected in 0.67s
+
+BLOCO 22 — PASS: Contexto do agente com modelo simulado
+BLOCO 22 — NÃO EXECUTADO: RUN_LIVE_LLM não habilitado; nenhuma chamada real foi feita.
+.....                                                                    [100%]
+5 passed, 38 deselected in 0.89s
+
+BLOCO 23 — PASS: Falhas e limites
+...........................................                              [100%]
+43 passed in 2.87s
+
+BLOCO 24 — PASS: Suíte completa
+Resumo até bloco 24: [
+  {
+    "block": 1,
+    "title": "Ambiente",
+    "status": "PASS"
+  },
+  {
+    "block": 2,
+    "title": "Configuração",
+    "status": "PASS"
+  },
+  {
+    "block": 3,
+    "title": "Fontes",
+    "status": "PASS"
+  },
+  {
+    "block": 4,
+    "title": "Importação",
+    "status": "PASS"
+  },
+  {
+    "block": 5,
+    "title": "Integridade",
+    "status": "PASS"
+  },
+  {
+    "block": 6,
+    "title": "Reimportação",
+    "status": "PASS"
+  },
+  {
+    "block": 7,
+    "title": "Busca",
+    "status": "PASS"
+  },
+  {
+    "block": 8,
+    "title": "Disponibilidade",
+    "status": "PASS"
+  },
+  {
+    "block": 9,
+    "title": "Promoções",
+    "status": "PASS"
+  },
+  {
+    "block": 10,
+    "title": "Dinheiro e limites",
+    "status": "PASS"
+  },
+  {
+    "block": 11,
+    "title": "Políticas",
+    "status": "PASS"
+  },
+  {
+    "block": 12,
+    "title": "Pedidos",
+    "status": "PASS"
+  },
+  {
+    "block": 13,
+    "title": "Autorização",
+    "status": "PASS"
+  },
+  {
+    "block": 14,
+    "title": "Sessões",
+    "status": "PASS"
+  },
+  {
+    "block": 15,
+    "title": "Handshake Meta",
+    "status": "PASS"
+  },
+  {
+    "block": 16,
+    "title": "Assinatura Meta",
+    "status": "PASS"
+  },
+  {
+    "block": 17,
+    "title": "Eventos Meta",
+    "status": "PASS"
+  },
+  {
+    "block": 18,
+    "title": "Fila persistente",
+    "status": "PASS"
+  },
+  {
+    "block": 19,
+    "title": "HTTP Meta simulado",
+    "status": "PASS"
+  },
+  {
+    "block": 20,
+    "title": "Janela e templates",
+    "status": "PASS"
+  },
+  {
+    "block": 21,
+    "title": "Fluxo integrado simulado",
+    "status": "PASS"
+  },
+  {
+    "block": 22,
+    "title": "Contexto do agente com modelo simulado",
+    "status": "PASS"
+  },
+  {
+    "block": 22,
+    "title": "LLM real",
+    "status": "SKIPPED",
+    "reason": "RUN_LIVE_LLM não habilitado; nenhuma chamada real foi feita."
+  },
+  {
+    "block": 23,
+    "title": "Falhas e limites",
+    "status": "PASS"
+  },
+  {
+    "block": 24,
+    "title": "Suíte completa",
+    "status": "PASS"
+  }
+]
+BLOCO 25 — NÃO EXECUTADO: RUN_LIVE_META não habilitado; nenhum WhatsApp real foi enviado.
+Validação concluída. Integrações não executadas permanecem SKIPPED.

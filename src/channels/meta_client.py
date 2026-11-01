@@ -9,12 +9,13 @@ class WindowClosed(DeliveryError):pass
 
 class MetaClient:
     def __init__(self,settings,http=None):
-        self.settings=settings;self.http=http or httpx.Client(timeout=15)
+        self.settings=settings;self.http=http
     def _post(self,payload):
         s=self.settings
         if s.meta_dry_run:return {'dry_run':True,'payload_type':payload['type']}
         if not s.meta_access_token or not s.meta_phone_number_id or not re.fullmatch(r'v\d+\.\d+',s.meta_graph_api_version):raise DeliveryError('missing_meta_configuration')
         url=f'https://graph.facebook.com/{s.meta_graph_api_version}/{s.meta_phone_number_id}/messages'
+        if self.http is None:self.http=httpx.Client(timeout=15)
         try:r=self.http.post(url,headers={'Authorization':'Bearer '+s.meta_access_token},json=payload)
         except httpx.RequestError as exc:raise UncertainDelivery('network_outcome_unknown') from exc
         if r.status_code==429:raise RetryableDelivery('rate_limited')

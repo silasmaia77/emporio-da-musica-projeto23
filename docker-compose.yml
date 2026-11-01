@@ -1,0 +1,48 @@
+services:
+  init:
+    build: .
+    env_file: .env
+    environment:
+      DATABASE_PATH: /app/data/processed/store.sqlite
+    volumes:
+      - store_data:/app/data/processed
+    command: python -m src.data.importer
+  ui:
+    build: .
+    env_file: .env
+    environment:
+      DATABASE_PATH: /app/data/processed/store.sqlite
+    volumes:
+      - store_data:/app/data/processed
+    ports:
+      - "127.0.0.1:8501:8501"
+    depends_on:
+      init:
+        condition: service_completed_successfully
+    command: streamlit run app.py --server.address=0.0.0.0
+  api:
+    build: .
+    env_file: .env
+    environment:
+      DATABASE_PATH: /app/data/processed/store.sqlite
+    volumes:
+      - store_data:/app/data/processed
+    ports:
+      - "127.0.0.1:8000:8000"
+    depends_on:
+      init:
+        condition: service_completed_successfully
+    command: uvicorn src.api:app --host 0.0.0.0 --port 8000
+  worker:
+    build: .
+    env_file: .env
+    environment:
+      DATABASE_PATH: /app/data/processed/store.sqlite
+    volumes:
+      - store_data:/app/data/processed
+    depends_on:
+      init:
+        condition: service_completed_successfully
+    command: python -m src.worker
+volumes:
+  store_data:
