@@ -27,6 +27,10 @@ def import_data(settings=None):
     fields={'categorias':{'category_id','name','description'},'clientes':{'customer_id','name','phone','email','city'},'produtos':{'product_id','category_id','name','description','price_brl','stock_quantity','status','specs_json','created_at'},'pedidos':{'order_id','customer_id','order_date','status','total_brl','payment_method','tracking_code','estimated_delivery','notes'},'itens_pedido':{'item_id','order_id','product_id','quantity'},'promocoes':{'promotion_id','product_id','discount_percent','description','is_active'}}
     for tab,keys in fields.items():
         if tab not in tables or not tables[tab] or not keys.issubset(tables[tab][0]): raise ValueError(f'Missing table/fields: {tab}')
+    for tab,key in {'categorias':'category_id','clientes':'customer_id','produtos':'product_id','pedidos':'order_id','itens_pedido':'item_id','promocoes':'promotion_id'}.items():
+        ids=[r[key] for r in tables[tab]]
+        if any(isinstance(v,bool) or not isinstance(v,int) or v<=0 for v in ids) or len(set(ids))!=len(ids):
+            raise ValueError(f'Invalid or duplicate identifiers: {tab}.{key}')
     initialize(s.database_path)
     with connect(s.database_path) as c:
         # UPSERT preserves session references and never resets historical chat/queue data.

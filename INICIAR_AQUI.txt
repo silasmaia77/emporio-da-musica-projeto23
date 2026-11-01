@@ -1,0 +1,29 @@
+EMPÓRIO DA MÚSICA — PROJETO COMPLETO
+
+1. Extraia o ZIP e abra a pasta emporio_da_musica.
+2. Instale Python 3.12.
+3. Crie e ative o ambiente virtual conforme README.md.
+4. Instale: python -m pip install -r requirements-dev.txt
+5. Copie .env.example para .env e preencha OPENAI_API_KEY e OPENAI_MODEL.
+6. Importe a base: python -m src.data.importer
+7. Abra o chat: streamlit run app.py
+
+VALIDAÇÃO EM PYTHON
+notebooks/01_validacao_completa.py: 25 blocos numerados com # %%.
+notebooks/01_validacao_completa.ipynb: mesmas células Python para Jupyter/VS Code.
+python notebooks/01_validacao_completa.py
+python -m pytest -q
+
+META OFICIAL
+Leia docs/meta_setup.md. O padrão META_DRY_RUN=true NÃO envia mensagens reais.
+API: python -m uvicorn src.api:app --host 127.0.0.1 --port 8000
+Worker: python -m src.worker
+
+LIMITES IMPORTANTES
+LLM real e WhatsApp real dependem das suas credenciais e não foram validados nesta entrega.
+As conversas de examples/ são simulações identificadas, com consultas reais às ferramentas locais.
+O seletor de cliente na interface é uma identidade simulada para demonstrar os pedidos.
+Não exponha essa interface local como login público de clientes.
+
+Documentação técnica e resumo em PDF estão em inglês para o desafio.
+O projeto inclui histórico Git local e não foi publicado ou submetido à recrutadora.

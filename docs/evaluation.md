@@ -21,3 +21,5 @@ Run additional real-model adversarial scenarios before submission. In particular
 ## Known validation boundaries
 
 Dependencies installed and imports/tests executed in Python 3.12. Docker configuration included; image build not executed. OpenAI-compatible provider URL path is configurable but not independently validated. Meta version/default intentionally omitted pending dashboard selection. Public repository and final submission not created. Queue scaling and production identity verification are outside this prototype.
+
+The host disallowed the sockets required to start a Jupyter kernel. Notebook Python cells were instead executed sequentially in the same Python process, with actual captured outputs, in addition to running the paired script. Notebook structure was validated with nbformat. A local Jupyter kernel run remains an operator check; it is not claimed as completed in this environment.

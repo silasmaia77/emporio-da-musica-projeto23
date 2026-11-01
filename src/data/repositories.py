@@ -27,7 +27,7 @@ class StoreRepository:
             word=aliases.get(word,word)
             word=word.replace('%','\\%').replace('_','\\_')
             sql+=" AND norm(name || ' ' || category_name) LIKE ? ESCAPE '\\'";args.append('%'+word+'%')
-        if category:sql+=' AND norm(category_name)=?';args.append(normalize(category))
+        if category:sql+=' AND norm(category_name)=?';args.append(aliases.get(normalize(category),normalize(category)))
         if max_price_brl is not None:
             n=Decimal(str(max_price_brl))
             if not n.is_finite() or n<0:raise ValueError('Invalid budget')
