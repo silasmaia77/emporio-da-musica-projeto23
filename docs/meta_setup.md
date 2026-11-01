@@ -19,7 +19,7 @@ Choose `META_GRAPH_API_VERSION` explicitly from the currently supported versions
 
 ```bash
 python -m src.data.importer
-python -m uvicorn src.api:app --host 127.0.0.1 --port 8000
+python -m uvicorn src.api:app --host 127.0.0.1 --port 8023
 python -m src.worker
 ```
 

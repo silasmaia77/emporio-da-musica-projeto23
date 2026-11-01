@@ -7,5 +7,5 @@ RUN useradd -m appuser
 COPY --chown=appuser:appuser . .
 RUN mkdir -p data/processed && chown -R appuser:appuser /app
 USER appuser
-EXPOSE 8501 8000
+EXPOSE 8523 8023
 CMD ["sh", "-c", "python -m src.data.importer && streamlit run app.py --server.address=0.0.0.0"]

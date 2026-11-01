@@ -1,4 +1,4 @@
-# Empório da Música — Mel
+# Projeto 23 — Empório da Música — Mel
 
 A Python customer-support agent for the Artefact AI Engineer technical challenge. Mel answers in Brazilian Portuguese using relational business data and retrieved store policies. The same tool-calling engine powers a local Streamlit chat, CLI and an official Meta WhatsApp Cloud API webhook/worker adapter.
 
@@ -23,7 +23,7 @@ python -m src.data.importer
 streamlit run app.py
 ```
 
-Open http://localhost:8501. Without credentials, the interface still starts and explains what configuration is missing. It does not replace the LLM with canned answers.
+Open http://localhost:8523. Without credentials, the interface still starts and explains what configuration is missing. It does not replace the LLM with canned answers.
 
 CLI:
 
@@ -70,7 +70,7 @@ See [assumptions](docs/assumptions.md) for explicit interpretations.
 See [Meta setup](docs/meta_setup.md). Keep `META_DRY_RUN=true` until intentional live testing.
 
 ```bash
-python -m uvicorn src.api:app --host 127.0.0.1 --port 8000
+python -m uvicorn src.api:app --host 127.0.0.1 --port 8023
 # In a separate terminal with the same environment:
 python -m src.worker
 ```
@@ -120,3 +120,7 @@ This project was built with ChatGPT/Codex assistance for architecture, implement
 The included Git history records real incremental build stages using `Project Builder <builder@example.invalid>`, not the candidate's identity. Inspect with `git log --oneline`. The repository has not been published and no submission was sent. Preserve this history when publishing; stop modifying the submitted repository at the actual submission cutoff.
 
 Deliverables requested by the recruiter (English PDF/Google Forms) and challenge (public repository/email link) should both be addressed by the candidate. `docs/technical_summary.pdf` is an English draft; repository URL remains intentionally unset until publication.
+
+## Project 23 port allocation
+
+Local UI: 8523. Meta webhook API: 8023. CLI, worker and SQLite do not expose listening ports. Compose project name is `emporio_musica_23`; its named volume is isolated from other Compose projects. The Meta callback is `/webhook` behind HTTPS, normally external port 443. Existing tunnel/reverse-proxy targets must point to local port 8023. Availability on the operator computer has not been checked.

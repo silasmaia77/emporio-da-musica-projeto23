@@ -14,7 +14,7 @@ def bootstrap(path):
     return True
 bootstrap(str(s.database_path))
 st.title('🎵 Empório da Música')
-st.caption('Sua música começa aqui. • Assistente virtual Mel')
+st.caption('Projeto 23 • Sua música começa aqui. • Assistente virtual Mel')
 st.info('Demonstração local com dados fictícios. Este chat não envia mensagens ao WhatsApp.')
 if 'session_id' not in st.session_state:st.session_state.session_id='ui:'+str(uuid.uuid4())
 sid=st.session_state.session_id

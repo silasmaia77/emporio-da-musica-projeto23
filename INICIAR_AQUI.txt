@@ -1,3 +1,5 @@
+PROJETO 23 | Chat: 8523 | API Meta: 8023
+
 EMPÓRIO DA MÚSICA — PROJETO COMPLETO
 
 1. Extraia o ZIP e abra a pasta emporio_da_musica.
@@ -16,7 +18,7 @@ python -m pytest -q
 
 META OFICIAL
 Leia docs/meta_setup.md. O padrão META_DRY_RUN=true NÃO envia mensagens reais.
-API: python -m uvicorn src.api:app --host 127.0.0.1 --port 8000
+API: python -m uvicorn src.api:app --host 127.0.0.1 --port 8023
 Worker: python -m src.worker
 
 LIMITES IMPORTANTES

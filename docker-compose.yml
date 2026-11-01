@@ -1,3 +1,4 @@
+name: emporio_musica_23
 services:
   init:
     build: .
@@ -15,7 +16,7 @@ services:
     volumes:
       - store_data:/app/data/processed
     ports:
-      - "127.0.0.1:8501:8501"
+      - "127.0.0.1:8523:8523"
     depends_on:
       init:
         condition: service_completed_successfully
@@ -28,11 +29,11 @@ services:
     volumes:
       - store_data:/app/data/processed
     ports:
-      - "127.0.0.1:8000:8000"
+      - "127.0.0.1:8023:8023"
     depends_on:
       init:
         condition: service_completed_successfully
-    command: uvicorn src.api:app --host 0.0.0.0 --port 8000
+    command: uvicorn src.api:app --host 0.0.0.0 --port 8023
   worker:
     build: .
     env_file: .env
