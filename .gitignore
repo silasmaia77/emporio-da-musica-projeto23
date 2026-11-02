@@ -10,3 +10,29 @@ data/processed/*
 *.sqlite-shm
 notebooks/*executed.ipynb
 validation_report.json
+
+# Credenciais
+.env
+.env.*
+!.env.example
+
+# Ambientes virtuais
+.venv/
+.venv*/
+venv/
+
+# Arquivos gerados
+__pycache__/
+.pytest_cache/
+.ipynb_checkpoints/
+data/processed/*
+!data/processed/.gitkeep
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+*.db
+*.log
+
+# Arquivos de recuperação
+*.bundle
+Projeto23_Recuperacao_Git.zip
