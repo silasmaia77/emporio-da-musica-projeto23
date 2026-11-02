@@ -233,6 +233,19 @@ def test_23_provider_failure(settings):
     result=Agent(settings,ScriptedClient([TimeoutError()])).chat('s','Olá')
     assert result['mode']=='error' and 'dificuldade' in result['answer']
 
+def test_luna_tool_compatibility(settings):
+    settings.openai_model='gpt-5.6-luna'
+    client=ScriptedClient([message('Boa noite!')])
+    result=Agent(settings,client).chat('luna','Boa noite')
+    assert result['mode']=='llm'
+    assert client.requests[0]['reasoning_effort']=='none'
+    assert client.requests[0]['tools']
+
+def test_other_models_do_not_receive_luna_override(settings):
+    client=ScriptedClient([message('Olá!')])
+    Agent(settings,client).chat('other','Olá')
+    assert 'reasoning_effort' not in client.requests[0]
+
 def test_23_tool_guardrails(settings):
     t=Tools(settings,'x')
     assert t.call('get_order_status',{'order_id':1,'customer_id':3})['status']=='invalid_arguments'

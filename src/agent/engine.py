@@ -29,7 +29,10 @@ class Agent:
         tools=Tools(self.settings,session_id);trace=[];sources=[];calls=0
         try:
             for _ in range(self.settings.max_tool_calls+1):
-                response=self.client.chat.completions.create(model=self.settings.openai_model,messages=messages,tools=definitions(),parallel_tool_calls=False)
+                options={}
+                if self.settings.openai_model.startswith('gpt-5.6-luna'):
+                    options['reasoning_effort']='none'
+                response=self.client.chat.completions.create(model=self.settings.openai_model,messages=messages,tools=definitions(),parallel_tool_calls=False,**options)
                 m=response.choices[0].message
                 tool_calls=m.tool_calls or []
                 if not tool_calls:
