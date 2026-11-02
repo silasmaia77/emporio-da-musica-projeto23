@@ -8,7 +8,7 @@ def build():
     source=(here/'01_validacao_completa.py').read_text(encoding='utf8')
     chunks=re.split(r'^# %% ',source,flags=re.MULTILINE)[1:]
     notebook=nbformat.v4.new_notebook()
-    notebook.metadata={'kernelspec':{'display_name':'Python 3','language':'python','name':'python3'},'language_info':{'name':'python','version':'3.12'}}
+    notebook.metadata={'kernelspec':{'display_name':'Python 3','language':'python','name':'python3'},'language_info':{'name':'python','version':'3.10'}}
     notebook.cells=[nbformat.v4.new_markdown_cell('# Validação completa — Empório da Música\n\n25 blocos numerados. Células Python. Por padrão, sem chamadas reais ao LLM ou à Meta. Execute em ordem; resultados externos ausentes são marcados como não executados.')]
     for chunk in chunks:
         title,code=chunk.split('\n',1)

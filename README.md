@@ -6,15 +6,15 @@ A Python customer-support agent for the Artefact AI Engineer technical challenge
 
 ## Quick start
 
-Python **3.12** recommended. From this directory:
+Python **3.10** is the target runtime. From this directory:
 
-```bash
-python -m venv .venv
-# Linux/macOS
-source .venv/bin/activate
-# Windows PowerShell instead: .venv\Scripts\Activate.ps1
+```powershell
+py -3.10 -m venv .venv23
+.\.venv23\Scripts\Activate.ps1
 python -m pip install -r requirements-dev.txt
 ```
+
+On Linux/macOS, create with `python3.10 -m venv .venv23` and activate with `source .venv23/bin/activate` before the same pip command.
 
 Copy `.env.example` to `.env` (Windows: `Copy-Item .env.example .env`; Linux/macOS: `cp .env.example .env`). Set `OPENAI_API_KEY` and `OPENAI_MODEL` to a tool-capable model available in your account. A model identifier is deliberately not invented or fixed to an unverified account entitlement. Optional `OPENAI_BASE_URL` selects an OpenAI-compatible provider; compatibility must be tested separately.
 
@@ -124,3 +124,7 @@ Deliverables requested by the recruiter (English PDF/Google Forms) and challenge
 ## Project 23 port allocation
 
 Local UI: 8523. Meta webhook API: 8023. CLI, worker and SQLite do not expose listening ports. Compose project name is `emporio_musica_23`; its named volume is isolated from other Compose projects. The Meta callback is `/webhook` behind HTTPS, normally external port 443. Existing tunnel/reverse-proxy targets must point to local port 8023. Availability on the operator computer has not been checked.
+
+### Python 3.10 migration
+
+Streamlit is pinned to 1.65.0 (the next minor dropped Python 3.10). Docker, notebook metadata and runtime checks target Python 3.10. `tzdata` is an explicit dependency for Windows ZoneInfo support. Keep project ports 8523/8023 and Compose name `emporio_musica_23`. Dependencies and the full test suite are revalidated in an isolated CPython 3.10 environment.

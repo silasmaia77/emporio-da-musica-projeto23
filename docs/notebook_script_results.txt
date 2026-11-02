@@ -1,106 +1,129 @@
-Python: 3.12.14
+Python: 3.10.22
 openai 3.42.1
 fastapi 0.162.0
 httpx 0.28.1
-streamlit 1.66.1
+streamlit 1.65.0
 openpyxl 3.1.5
 pypdf 6.10.0
 pytest 9.2.0
 .                                                                        [100%]
-1 passed, 42 deselected in 0.58s
+1 passed, 45 deselected in 0.60s
 
 BLOCO 01 — PASS: Ambiente
+
 .                                                                        [100%]
-1 passed, 42 deselected in 0.67s
+1 passed, 45 deselected in 0.54s
 
 BLOCO 02 — PASS: Configuração
+
 .                                                                        [100%]
-1 passed, 42 deselected in 0.68s
+1 passed, 45 deselected in 0.76s
 
 BLOCO 03 — PASS: Fontes
+
 .                                                                        [100%]
-1 passed, 42 deselected in 0.90s
+1 passed, 45 deselected in 0.59s
 
 BLOCO 04 — PASS: Importação
+
 .                                                                        [100%]
-1 passed, 42 deselected in 0.61s
+1 passed, 45 deselected in 0.64s
 
 BLOCO 05 — PASS: Integridade
+
 .                                                                        [100%]
-1 passed, 42 deselected in 0.66s
+1 passed, 45 deselected in 0.71s
 
 BLOCO 06 — PASS: Reimportação
+
 ......                                                                   [100%]
-6 passed, 37 deselected in 0.98s
+6 passed, 40 deselected in 1.06s
 
 BLOCO 07 — PASS: Busca
+
 .                                                                        [100%]
-1 passed, 42 deselected in 0.62s
+1 passed, 45 deselected in 0.59s
 
 BLOCO 08 — PASS: Disponibilidade
-.                                                                        [100%]
-1 passed, 42 deselected in 0.73s
+
+..                                                                       [100%]
+2 passed, 44 deselected in 0.68s
 
 BLOCO 09 — PASS: Promoções
+
 .....                                                                    [100%]
-5 passed, 38 deselected in 0.60s
+5 passed, 41 deselected in 0.56s
 
 BLOCO 10 — PASS: Dinheiro e limites
+
 ....                                                                     [100%]
-4 passed, 39 deselected in 1.16s
+4 passed, 42 deselected in 1.23s
 
 BLOCO 11 — PASS: Políticas
+
 .                                                                        [100%]
-1 passed, 42 deselected in 0.63s
+1 passed, 45 deselected in 0.56s
 
 BLOCO 12 — PASS: Pedidos
+
 .                                                                        [100%]
-1 passed, 42 deselected in 0.61s
+1 passed, 45 deselected in 0.60s
 
 BLOCO 13 — PASS: Autorização
-.                                                                        [100%]
-1 passed, 42 deselected in 0.61s
+
+..                                                                       [100%]
+2 passed, 44 deselected in 0.60s
 
 BLOCO 14 — PASS: Sessões
+
 .                                                                        [100%]
-1 passed, 42 deselected in 0.58s
+1 passed, 45 deselected in 0.66s
 
 BLOCO 15 — PASS: Handshake Meta
+
 .                                                                        [100%]
-1 passed, 42 deselected in 0.59s
+1 passed, 45 deselected in 0.57s
 
 BLOCO 16 — PASS: Assinatura Meta
+
 .                                                                        [100%]
-1 passed, 42 deselected in 0.61s
+1 passed, 45 deselected in 0.64s
 
 BLOCO 17 — PASS: Eventos Meta
+
 ..                                                                       [100%]
-2 passed, 41 deselected in 0.74s
+2 passed, 44 deselected in 0.63s
 
 BLOCO 18 — PASS: Fila persistente
+
 ....                                                                     [100%]
-4 passed, 39 deselected in 0.71s
+4 passed, 42 deselected in 0.77s
 
 BLOCO 19 — PASS: HTTP Meta simulado
+
 .                                                                        [100%]
-1 passed, 42 deselected in 0.67s
+1 passed, 45 deselected in 0.61s
 
 BLOCO 20 — PASS: Janela e templates
-.                                                                        [100%]
-1 passed, 42 deselected in 0.63s
+
+..                                                                       [100%]
+2 passed, 44 deselected in 0.73s
 
 BLOCO 21 — PASS: Fluxo integrado simulado
+
 .                                                                        [100%]
-1 passed, 42 deselected in 0.67s
+1 passed, 45 deselected in 0.63s
 
 BLOCO 22 — PASS: Contexto do agente com modelo simulado
 BLOCO 22 — NÃO EXECUTADO: RUN_LIVE_LLM não habilitado; nenhuma chamada real foi feita.
+
 .....                                                                    [100%]
-5 passed, 38 deselected in 0.89s
+5 passed, 41 deselected in 0.90s
 
 BLOCO 23 — PASS: Falhas e limites
-...........................................                              [100%]
-43 passed in 2.87s
+
+..............................................                           [100%]
+46 passed in 3.56s
 
 BLOCO 24 — PASS: Suíte completa
 Resumo até bloco 24: [
@@ -231,5 +254,6 @@ Resumo até bloco 24: [
     "status": "PASS"
   }
 ]
+
 BLOCO 25 — NÃO EXECUTADO: RUN_LIVE_META não habilitado; nenhum WhatsApp real foi enviado.
 Validação concluída. Integrações não executadas permanecem SKIPPED.

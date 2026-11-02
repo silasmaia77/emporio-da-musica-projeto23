@@ -15,7 +15,7 @@ HERE=Path(__file__).resolve().parent if '__file__' in globals() else Path.cwd()
 ROOT=next((p for p in [HERE,HERE.parent,Path.cwd(),Path.cwd().parent] if (p/'src/config.py').exists()),None)
 assert ROOT is not None,'Abra o notebook na pasta do projeto.'
 sys.path.insert(0,str(ROOT))
-assert sys.version_info>=(3,12)
+assert sys.version_info>=(3,10)
 RESULTS=[]
 print('Python:',sys.version.split()[0])
 for name in ['openai','fastapi','httpx','streamlit','openpyxl','pypdf','pytest']:

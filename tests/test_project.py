@@ -25,7 +25,7 @@ from tests.helpers import ScriptedClient,message,payload
 
 def test_01_environment():
     import sys
-    assert sys.version_info>=(3,12)
+    assert sys.version_info>=(3,10)
 
 def test_02_configuration():
     with pytest.raises(ValueError):Settings(openai_api_key='',openai_model='').require_llm()

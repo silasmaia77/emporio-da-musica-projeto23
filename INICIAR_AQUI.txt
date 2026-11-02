@@ -3,7 +3,7 @@ PROJETO 23 | Chat: 8523 | API Meta: 8023
 EMPÓRIO DA MÚSICA — PROJETO COMPLETO
 
 1. Extraia o ZIP e abra a pasta emporio_da_musica.
-2. Instale Python 3.12.
+2. Instale Python 3.10.
 3. Crie e ative o ambiente virtual conforme README.md.
 4. Instale: python -m pip install -r requirements-dev.txt
 5. Copie .env.example para .env e preencha OPENAI_API_KEY e OPENAI_MODEL.
@@ -29,3 +29,9 @@ Não exponha essa interface local como login público de clientes.
 
 Documentação técnica e resumo em PDF estão em inglês para o desafio.
 O projeto inclui histórico Git local e não foi publicado ou submetido à recrutadora.
+
+PYTHON 3.10 / WINDOWS POWERSHELL
+py -3.10 -m venv .venv23
+.\.venv23\Scripts\Activate.ps1
+python -m pip install --upgrade pip
+python -m pip install -r requirements-dev.txt
